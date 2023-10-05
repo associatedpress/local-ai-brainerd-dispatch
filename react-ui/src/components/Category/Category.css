@@ -1,0 +1,110 @@
+.category-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:85%;
+    /*margin-left: 3%; */
+  }
+
+  .category-title{
+      color: white;
+      font-size: 20px;
+  }
+
+  .category-header:hover{
+      cursor: pointer;
+      background-color: #eee;
+  }
+  
+  .category-box {
+    width: 35%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .priority-box {
+    width: 48%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-box1 {
+    box-sizing: border-box;
+    background-color: gray;
+    padding: 20px;
+    height: 15%;
+  }
+  
+  .category-box2 { 
+    box-sizing: border-box;
+    background-color: white;
+    padding: 5px;
+    height: 75%;
+    overflow: auto;
+  }
+
+
+
+.category-box2 table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .category-box2 th,
+  .category-box2 td {
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  .category-box2 th {
+    font-weight: bold;
+    background-color: #f5f5f5;
+  }
+
+  .categories-table-header{
+    position: sticky;
+    top: 0;
+  }
+  
+  .category-box2 tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .category-box2 tbody tr:hover {
+    background-color: #eee;
+  }
+  
+  .category-box2 tbody td:first-child {
+    width: 1%;
+    white-space: nowrap;
+  }
+  
+  .category-box2 tbody td:first-child input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+
+  .category-container .category-box .category-box2 table tbody tr:hover .delete-category-button {
+    opacity: 1;
+  }
+
+  .category-container .priority-box .category-box2 table tbody tr:hover .delete-category-button {
+    opacity: 1;
+  }
+  
+  .delete-category-button {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: rgb(0, 187, 255);
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  /* .category-container .category-box .category-box2 table tbody tr.hovered-row {
+    background-color: #f5f5f5;
+  } */

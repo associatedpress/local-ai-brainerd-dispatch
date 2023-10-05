@@ -1,0 +1,16 @@
+flask
+python-dotenv
+flask_sqlalchemy
+pika
+pytz
+apscheduler
+pandas
+PyPDF2==2.12.1
+requests
+pymysql
+flask_cors
+gunicorn
+pymupdf
+usaddress-scourgify
+frontend
+tabula-py==2.7.0

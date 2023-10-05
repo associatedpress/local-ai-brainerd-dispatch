@@ -1,0 +1,101 @@
+.error-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 0%;
+  }
+  
+  .both-box {
+    height: 700px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .error-image-box {
+    flex: 3;
+    background-color: gray;
+    padding: 20px;
+    color: white;
+    width: 600px;
+  }
+  
+  .error-message-box {
+    flex: 1;
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .error-message-title {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+  }
+  
+  .error-message {
+    text-align: center;
+    color: white;
+  }
+
+  .error-image-title{
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  .error-uploaded-image-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        position: relative;   
+  }
+
+  .error-message-title{
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    font-weight: bold;
+  }
+  
+  .db_label{
+      color: black;
+      font-size: small;
+  }
+
+  .error-uploadBtn{
+    background-color: lightblue;
+  color: white;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  justify-self: end;
+  bottom: 20px;
+  margin-top: 175%;
+}
+
+
+.error-uploadBtn:disabled {
+    opacity: 0.5; /* Set the opacity to 0.5 when the button is disabled */
+  }
+  
+  .error-uploadBtn:not([disabled]):hover {
+    background-color: blue;
+  }
+
+  .error-agencyDropdown{
+    margin-bottom: 1%;
+  }
+
+  .error-ParserDropdown{
+    margin-left: 53%;
+  }

@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "3c2d6d3c-ba0a-4c19-9ed8-afce55ff6302",
+		"name": "brainerd-postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25342509"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log(jsonData.response.session_token)",
+							"postman.setGlobalVariable(\"session-token\", jsonData.response.session_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"admin\", \"password\": \"LoveLocalNews2023!\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_agencies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "session-token",
+						"value": "{{session-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/agencies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"agencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_agency",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "session-token",
+						"value": "{{session-token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/agencies?name=AGENCY_NAME&city=CITY_NAME&state=MN&parser=2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"agencies"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "AGENCY_NAME"
+						},
+						{
+							"key": "city",
+							"value": "CITY_NAME"
+						},
+						{
+							"key": "state",
+							"value": "MN"
+						},
+						{
+							"key": "parser",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_agency",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "session-token",
+						"value": "{{session-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/agencies?agency_id=4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"agencies"
+					],
+					"query": [
+						{
+							"key": "agency_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "session-token",
+						"value": "{{session-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "session-token",
+						"value": "{{session-token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\": \"USER_NAME\",\n    \"user_password\": \"USER_PASS\",\n    \"user_firstname\": \"USER_FNAME\",\n    \"user_lastname\": \"USER_LNAME\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "session-token",
+						"value": "{{session-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/user?user_id=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

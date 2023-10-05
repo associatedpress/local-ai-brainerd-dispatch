@@ -1,0 +1,121 @@
+/* .banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #f44336;
+    color: white;
+    padding: 12px;
+  }
+  
+  .banner-message {
+    margin-right: 8px;
+  }
+  
+  .banner-close {
+    margin-left: 8px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+   */
+
+   /* .banner {
+    position: fixed;
+    top: 0;
+    left: 30%;
+    max-width: 30%;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    padding: 12px;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  } */
+
+  .banner {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 30%;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    padding: 12px;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 20px;
+  }
+  
+  
+  
+
+  .banner.visible {
+    display: block;
+  }
+  
+  .banner-success{
+    background-color: #5cb85c;
+    color: #fff;
+  }
+  
+  .banner-error{
+    background-color: #e52923;
+    color: #fff;
+  }
+  
+  /* .message {
+    margin-bottom: 8px;
+  }
+  
+  .banner__close {
+    margin-left: 5%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    padding: 0 16px;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border: 1px solid #dddbda;
+    color: #0070d2;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+  } */
+
+  .message {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 6px;
+  }
+  
+  .banner__close {
+    display: inline-block;
+    margin-right: 8px;
+    outline: none;
+    cursor: pointer;
+    padding: 0 16px;
+    background-color: #090909;
+    border-radius: 30px;
+    border: none;
+    color: #0070d2;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  
+ 
+
+

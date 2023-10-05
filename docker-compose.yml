@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  localai_react:
+    container_name: localai_react_container
+    build:
+      context: ./react-ui
+      dockerfile: Dockerfile
+    image: localai_react
+    ports:
+      - "80:3000"
+    #environment:
+    #  - HOST_URL=${HOST}
+    #networks:
+    #  - local-ai
+  
+  localai_flask:
+    build:
+      context: ./flask-server
+      dockerfile: Dockerfile
+    container_name: localai_flask_container
+    image: localai_flask
+    restart: always
+    ports:
+      - "7001:7001"
+    #networks:
+      #- local-ai
+    volumes:
+      - ./flask-server/staging:/flask-server/staging
+
+#volumes:
+#  user_storage: {}
+
+#networks:
+#  local-ai:
+  
